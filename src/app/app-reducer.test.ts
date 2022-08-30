@@ -1,6 +1,5 @@
 import {appReducer, setAppErrorAC, setAppStatusAC} from './app-reducer'
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
+
 
 let startState: any;
 
