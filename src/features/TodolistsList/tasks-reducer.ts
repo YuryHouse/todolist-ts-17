@@ -13,7 +13,6 @@ export const fetchTasksTC = createAsyncThunk('tasks/fetchTasks', (todolistId: st
     return todolistsAPI.getTasks(todolistId)
         .then((res) => {
             const tasks = res.data.items
-            // thunkAPI.dispatch(setTasksAC({tasks, todolistId}))
             thunkAPI.dispatch(setAppStatusAC({status: 'succeeded'}))
             return {tasks, todolistId}
         })
